@@ -1,6 +1,14 @@
 body {
     margin-top: 20px;
 }
+
+section {
+    margin: 70px auto 70px auto;
+    padding-left: 20px;
+    width: 960px;
+    background-color: violet;
+}
+
 .timeline_area {
     position: relative;
     z-index: 1;
@@ -8,7 +16,7 @@ body {
 .single-timeline-area {
     position: relative;
     z-index: 1;
-    padding-left: 180px;
+    padding-left: 50px;
 }
 @media only screen and (max-width: 575px) {
     .single-timeline-area {
@@ -17,7 +25,7 @@ body {
 }
 .single-timeline-area .timeline-date {
     position: absolute;
-    width: 180px;
+    width: 50px;
     height: 100%;
     top: 0;
     left: 0;
@@ -114,7 +122,65 @@ body {
 .single-timeline-area .single-timeline-content:focus .timeline-icon {
     background-color: #020710;
 }
-.single-timeline-area .single-timeline-content:hover .timeline-text h6,
-.single-timeline-area .single-timeline-content:focus .timeline-text h6 {
-    color: #3f43fd;
+
+.emotion{
+    background-size:30%;
+    background-repeat: no-repeat;
+    background-position: 100% 30%;
+    /* background-position: right center; */
+}
+
+.angry {
+    background-image: url("../assets/emotions/angry.svg");
+}
+
+.anxiety {
+    background-image: url("../assets/emotions/anxiety.svg");
+}
+
+.envy {
+    background-image: url("../assets/emotions/envy.svg");
+}
+
+.fear {
+    background-image: url("../assets/emotions/fear.svg");
+}
+
+.happy {
+    background-image: url("../assets/emotions/happy.svg");
+}
+
+.irritation {
+    background-image: url("../assets/emotions/irritation.svg");
+}
+
+.sad {
+    background-image: url("../assets/emotions/sad.svg");
+}
+
+.worry {
+    background-image: url("../assets/emotions/worry.svg");
+}
+
+
+.time-segment h3{
+margin-left: 50px;
+}
+
+.time-segment h3 i{
+    text-indent: -40px;
+    text-align: center;
+} 
+
+.menu-icon {
+    margin-right: 150px;
+    margin-left: 150px;
+
+}
+
+.profile {
+    margin: auto;
+    padding-left: 20px;
+    height: max-content;
+    width: 960px;
 }
