@@ -1,7 +1,7 @@
 body {
     margin-top: 20px;
     background-image: url("../assets/landing-page1.jpg");
-    background-size:contain;
+    background-size:cover;
 }
 
 section {
