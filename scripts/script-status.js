@@ -1,4 +1,4 @@
-
+import { users } from './list_users.js'
 /*
 < !--Single Timeline Content-- >
 <div class="single-timeline-area">
@@ -41,21 +41,23 @@ Needs:
 */
 
 
-const list_users = [
-    {
-        id: 9,
-        username: 'admin',
-        email: 'admin@cherio.com',
-        password: 'admin123',
-        bio : {age:'20', sex:'Male', goal:'Happy'},
-        history: [
-            {emotion_id: '901', time:'2022-11-09T07:01', emotion: 'happy'},
-            {emotion_id: '902', time:'2022-11-09T08:01', emotion: 'angry'},
-            {emotion_id: '903', time:'2022-11-09T13:01', emotion: 'sad'},
-            {emotion_id: '904', time:'2022-11-11T19:01', emotion: 'irritation'},
-        ]
-    }
-]
+// const users = [
+//     {
+//         id: 9,
+//         username: 'admin',
+//         email: 'admin@cherio.com',
+//         password: 'admin123',
+//         bio : {age:'20', sex:'Male', goal:'Happy'},
+//         history: [
+//             {emotion_id: '901', time:'2022-11-09T07:01', emotion: 'happy'},
+//             {emotion_id: '902', time:'2022-11-09T08:01', emotion: 'angry'},
+//             {emotion_id: '903', time:'2022-11-09T13:01', emotion: 'sad'},
+//             {emotion_id: '904', time:'2022-11-11T19:01', emotion: 'irritation'},
+//         ]
+//     }
+// ]
+
+
 
 let username ='admin'
 let morning =''
@@ -63,8 +65,8 @@ let afternoon=''
 let evening=''
 
 let today = new Date().toISOString().slice(0, 10)
-for (let key in list_users){
-    let user = list_users[key]
+for (let key in users){
+    let user = users[key]
     if (user.username === username){
         for (let emotions of user.history){
             if (emotions.time.slice(0,10) === today){
@@ -102,6 +104,8 @@ for (let key in list_users){
         }
     }
 }
+
+console.log(users)
 
 document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById('morning').innerHTML = morning
