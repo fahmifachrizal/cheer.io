@@ -57,15 +57,14 @@ const list_users = [
     }
 ]
 
-
 let username ='admin'
 let morning =''
 let afternoon=''
 let evening=''
 
 let today = new Date().toISOString().slice(0, 10)
-console.log(today)
-for (let user of list_users){
+for (let key in list_users){
+    let user = list_users[key]
     if (user.username === username){
         for (let emotions of user.history){
             if (emotions.time.slice(0,10) === today){
@@ -109,5 +108,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById('afternoon').innerHTML = afternoon
     document.getElementById('evening').innerHTML = evening
 })
-
-

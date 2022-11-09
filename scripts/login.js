@@ -7,7 +7,7 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === "a" && password === "a") {
+    if (username === "admin" && password === "admin") {
         location.assign('./status.html');
     } else {
         loginErrorMsg.style.opacity = 1;
