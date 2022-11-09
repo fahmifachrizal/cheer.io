@@ -7,18 +7,20 @@
     <!--  All snippets are MIT license http://bootdey.com/license -->
     <title>timeline events area - Bootdey.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./styles/stylesheet-status.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="./scripts/script-status.js"></script>
+    <link rel="stylesheet" href="./styles/stylesheet-status.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 
 <body>
     <nav class="navbar fixed-top navbar-light bg-light">
         <div class="profile">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="./profile.html">
                     <h2>Hi Fahmi Fachrizal</h2>
                 </a>
             </div>
@@ -31,166 +33,19 @@
                     <div class="time-segment">
                         <h3 style="color: white;"><i class="fa fa-sun-o"></i>Morning</h3>
                         <!-- Timeline Area-->
-                        <div class="apland-timeline-area">
-                            <!-- Single Timeline Content-->
-                            <div class="single-timeline-area">
-                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
-                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="single-timeline-content d-flex wow fadeInLeft emotion angry"
-                                            data-wow-delay="0.3s"
-                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                            <div class="timeline-text">
-                                                <h6>Angry</h6>
-                                                <p><small>07.01</small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Timeline Content-->
-                            <div class="single-timeline-area">
-                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
-                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="single-timeline-content d-flex wow fadeInLeft emotion anxiety"
-                                            data-wow-delay="0.3s"
-                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                            <div class="timeline-text">
-                                                <h6>Anxiety</h6>
-                                                <p><small>10.01</small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="apland-timeline-area" id="morning"></div>
                         <!-- End of Timeline Area-->
                     </div>
                     <div class="time-segment">
                         <h3 style="color: white;"><i class="fa fa-sun-o"></i>Afternoon</h3>
                         <!-- Timeline Area-->
-                        <div class="apland-timeline-area">
-                            <!-- Single Timeline Content-->
-                            <div class="single-timeline-area">
-                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
-                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="single-timeline-content d-flex wow fadeInLeft emotion envy"
-                                            data-wow-delay="0.3s"
-                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                            <div class="timeline-text">
-                                                <h6>Envy</h6>
-                                                <p><small>07.01</small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Timeline Content-->
-                            <div class="single-timeline-area">
-                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
-                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="single-timeline-content d-flex wow fadeInLeft emotion fear"
-                                            data-wow-delay="0.3s"
-                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                            <div class="timeline-text">
-                                                <h6>Fear</h6>
-                                                <p><small>10.01</small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="apland-timeline-area" id="afternoon"></div>
                         <!-- End of Timeline Area-->
                     </div>
                     <div class="time-segment">
                         <h3 style="color: white;"><i class="fa fa-moon-o"></i>Evening</h3>
                         <!-- Timeline Area-->
-                        <div class="apland-timeline-area">
-                            <!-- Single Timeline Content-->
-                            <div class="single-timeline-area">
-                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
-                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="single-timeline-content d-flex wow fadeInLeft emotion happy"
-                                            data-wow-delay="0.3s"
-                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                            <div class="timeline-text">
-                                                <h6>Happy</h6>
-                                                <p><small>07.01</small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Timeline Content-->
-                            <div class="single-timeline-area">
-                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
-                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="single-timeline-content d-flex wow fadeInLeft emotion irritation"
-                                            data-wow-delay="0.3s"
-                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                            <div class="timeline-text">
-                                                <h6>Irritation</h6>
-                                                <p><small>10.01</small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Timeline Content-->
-                            <div class="single-timeline-area">
-                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
-                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="single-timeline-content d-flex wow fadeInLeft emotion sad"
-                                            data-wow-delay="0.3s"
-                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                            <div class="timeline-text">
-                                                <h6>Sad</h6>
-                                                <p><small>10.01</small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Timeline Content-->
-                            <div class="single-timeline-area">
-                                <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
-                                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <div class="single-timeline-content d-flex wow fadeInLeft emotion worry"
-                                            data-wow-delay="0.3s"
-                                            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                                            <div class="timeline-text">
-                                                <h6>Worry</h6>
-                                                <p><small>10.01</small></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="apland-timeline-area" id="evening"></div>
                         <!-- End of Timeline Area-->
                     </div>
                 </div>

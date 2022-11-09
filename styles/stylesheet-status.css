@@ -1,7 +1,7 @@
 body {
     margin-top: 20px;
     background-image: url("../assets/landing-page1.jpg");
-    background-size:contain;
+    background-size:cover;
 }
 
 section {
@@ -22,11 +22,13 @@ section {
     padding-left: 50px;
 }
 
-@media only screen and (max-width: 575px) {
+@media (pointer:coarse){
     .single-timeline-area {
         padding-left: 100px;
     }
 }
+
+
 
 .single-timeline-area .timeline-date {
     position: absolute;
@@ -48,7 +50,7 @@ section {
     padding-right: 60px;
 }
 
-@media only screen and (max-width: 575px) {
+@media (pointer:coarse) {
     .single-timeline-area .timeline-date {
         width: 100px;
     }
@@ -99,7 +101,7 @@ section {
     border: 1px solid #ebebeb;
 }
 
-@media only screen and (max-width: 575px) {
+@media (pointer:coarse) {
     .single-timeline-area .single-timeline-content {
         padding: 20px;
     }
