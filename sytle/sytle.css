@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',sans-serif;
+}
+
+
+
+body{
+    background-image: url("../night.jpg");
+    background-color: rgb(6, 7, 7);
+}
+
+.box{
+    background-image: url("../anxiety.jpg");
+    width: 200px;
+    height: 230px;
+    display: inline-block; 
+    border-radius: 10px;
+    padding: 15 25px;
+    box-sizing: border-box;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+}
+.box2{
+    background-image: url("../angry.jpg");
+
+}
+.box3{
+    background-image: url("../irtation.jpg");
+}
+.box4{
+    background-image: url("../sadness.jpg");
+}
+.box5{
+    background-image: url("../feor.jpg");
+}.box6{
+    background-image: url("../worry.jpg");
+}
+.box7{
+    background-image: url("../envy.jpg");
+}
