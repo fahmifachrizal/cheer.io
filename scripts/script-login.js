@@ -32,4 +32,5 @@ loginButton.addEventListener("click", (e) => {
 // List of function
 function populateStorage() {
     sessionStorage.setItem('username', document.getElementById("login-form").username.value);
+    localStorage
 }

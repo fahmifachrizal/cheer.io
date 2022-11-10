@@ -7,10 +7,8 @@ const users = [
         password: `admin123`,
         bio: { fullname: `Admin`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `901`, time: `${this_day}T07:01`, emotion: `happy` },
             { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
-            { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
-            { emotion_id: `904`, time: `${this_day}T19:01`, emotion: `irritation` },
+            { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` }
         ]
     },
     {
@@ -20,10 +18,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Fahmi Fachrizal`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `901`, time: `${this_day}T07:01`, emotion: `happy` },
             { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
             { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
-            { emotion_id: `904`, time: `${this_day}T19:01`, emotion: `irritation` },
         ]
     },
     {
@@ -33,10 +29,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Moch Jordan`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `901`, time: `${this_day}T07:01`, emotion: `happy` },
             { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
             { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
-            { emotion_id: `904`, time: `${this_day}T19:01`, emotion: `irritation` },
         ]
     },
     {
@@ -46,10 +40,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Syamsul Bahri`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `901`, time: `${this_day}T07:01`, emotion: `happy` },
             { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
             { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
-            { emotion_id: `904`, time: `${this_day}T19:01`, emotion: `irritation` },
         ]
     },
     {
@@ -59,10 +51,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Rayhan Fatwa Madjid`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `901`, time: `${this_day}T07:01`, emotion: `happy` },
             { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
             { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
-            { emotion_id: `904`, time: `${this_day}T19:01`, emotion: `irritation` },
         ]
     },
     {
@@ -72,10 +62,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Argi Bramantya`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `901`, time: `${this_day}T07:01`, emotion: `happy` },
             { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
             { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
-            { emotion_id: `904`, time: `${this_day}T19:01`, emotion: `irritation` },
         ]
     },
     {
@@ -85,10 +73,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Attar Baqo`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `901`, time: `${this_day}T07:01`, emotion: `happy` },
             { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
             { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
-            { emotion_id: `904`, time: `${this_day}T19:01`, emotion: `irritation` },
         ]
     },
 ]
