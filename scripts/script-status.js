@@ -14,11 +14,14 @@ for (let key in users) {
     }
 }
 
+let lookup = {anger:'angry', anxiety:'anxiety', fear:'fear', sadness:'sad', angry:'angry', anxiety:'anxiety', fear:'fear', sad:'sad'}
+
 profilename = user.bio.fullname
 for (let emotions of user.history) {
     if (emotions.time.slice(0, 10) === today) {
         let time = emotions.time.slice(11, 17)
-        let emotion = emotions.emotion
+        let emotion = lookup[emotions.emotion]
+        emotion = emotion.charAt(0).toUpperCase() + emotion.slice(1);
         let str = `
         <div class="single-timeline-area">
             <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s"
@@ -26,7 +29,7 @@ for (let emotions of user.history) {
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-timeline-content d-flex wow fadeInLeft emotion ${emotion}" data-wow-delay="0.3s"
+                    <div class="single-timeline-content d-flex wow fadeInLeft emotion ${String(emotion).toLowerCase()}" data-wow-delay="0.3s"
                         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
                         <div class="timeline-text">
                             <h6>${emotion}</h6>

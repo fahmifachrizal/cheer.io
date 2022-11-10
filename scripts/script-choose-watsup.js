@@ -11,11 +11,11 @@ for (let key in users) {
 profilename = user.bio.fullname
 const save_button = document.getElementsByClassName('save')
 const emotion = document.getElementById('emotion').innerHTML
-const time =
+const time_day = addHours(new Date(),7)
 
 document.addEventListener("click", function (event) {
     let time = new Date().toISOString()
-    let obj = {emotion_id:`666`, time:time, emotion:String(emotion).toLowerCase()} 
+    let obj = {emotion_id:`666`, time:time_day, emotion:String(emotion).toLowerCase()} 
     for (let key in users) {
         let val = users[key]
         if (val.username === username) {
@@ -32,6 +32,10 @@ function populateStorage() {
     localStorage.setItem(`list_users`, JSON.stringify(users));
 }
 
+function addHours(date, hours) {
+    date.setHours(date.getHours() + hours);
+    return date;
+}
 // { emotion_id: `901`, time: `${this_day}T07:01`, emotion: `happy` },
 // `anger`
 // `anxiety`
