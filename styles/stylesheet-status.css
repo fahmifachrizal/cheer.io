@@ -1,7 +1,10 @@
 body {
     margin-top: 20px;
-    background-image: url("../assets/landing-page1.jpg");
-    background-size:cover;
+    background-image: url("../assets/images/bg-health.jpg");
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
 }
 
 section {
