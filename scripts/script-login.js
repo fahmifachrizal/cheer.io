@@ -1,4 +1,3 @@
-// // const {users} = require('./list_users.js')
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
 const loginErrorMsg = document.getElementById("login-error-msg");
@@ -9,7 +8,7 @@ loginButton.addEventListener("click", (e) => {
     e.preventDefault();
     const username = loginForm.username.value;
     const password = loginForm.password.value;
-    
+
     let isUser = false
     for (let key in users) {
         let user = users[key]
@@ -23,9 +22,7 @@ loginButton.addEventListener("click", (e) => {
                 title: "TETOT!",
                 text: "Username & Password Gak Cocok Nih, Coba lagi Yuk!",
                 icon: "error",
-              });
-            
-            break
+            });
         }
     }
 

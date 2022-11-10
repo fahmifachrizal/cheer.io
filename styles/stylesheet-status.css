@@ -9,8 +9,7 @@ body {
 section {
     margin: 70px auto 70px auto;
     padding-left: 20px;
-    width: 960px;
-    /* background-color: violet; */
+    width: 960px !important;
 }
 
 .timeline_area {
@@ -22,12 +21,6 @@ section {
     position: relative;
     z-index: 1;
     padding-left: 50px;
-}
-
-@media (pointer:coarse) {
-    .single-timeline-area {
-        padding-left: 100px;
-    }
 }
 
 .single-timeline-area .timeline-date {
@@ -48,12 +41,6 @@ section {
     -ms-flex-pack: end;
     justify-content: flex-end;
     padding-right: 60px;
-}
-
-@media (pointer:coarse) {
-    .single-timeline-area .timeline-date {
-        width: 100px;
-    }
 }
 
 .single-timeline-area .timeline-date::after {
@@ -141,7 +128,6 @@ section {
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: 100% 30%;
-    /* background-position: right center; */
 }
 
 .angry {
@@ -184,7 +170,6 @@ section {
 
 .menu-bottom {
     width: 960px;
-    /* display: flex; */
     margin: auto;
     justify-content: space-around;
 }
@@ -198,12 +183,6 @@ section {
 }
 
 
-/* @media screen and (min-width: 600px) {
-    .mobile-nav {
-    display: none;
-    }
-} */
-
 .container {
     margin: auto;
     padding-bottom: 100px;
@@ -216,7 +195,7 @@ section {
 .delete-x {
     color: white;
     padding-top: 54px;
-    text-indent: -170px;
+    text-indent: -180px;
 }
 
 .delete-x:hover {
@@ -228,77 +207,7 @@ section {
     opacity: 0.4;
 }
 
-/* delete comfirmation */
-#cancelbtn,
-#deletebtn {
-    float: center;
-    width: 25%;
-    margin: 20px;
-    padding-left: 20px;
-    align-items: center;
-}
-
-/* Add a color to the cancel button */
-#cancelbtn {
-    background-color: #ccc;
-    color: black;
-}
-
-/* Add a color to the delete button */
-#deletebtn {
-    background-color: #f44336;
-}
-
-.container-delete {
+.nav-bottom {
     width: 960px;
-    padding: 16px;
     margin: auto;
-    text-align: center;
-}
-
-/* The Modal (background) */
-.modal {
-    left: 0;
-    top: 0;
-    width: 960px;
-    height: 50%;
-    background-color: #474e5d;
-    padding-top: 15%;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    border: 1px solid #888;
-    width: 960px;
-}
-
-/* Style the horizontal ruler */
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-}
-
-/* The Modal Close Button (x) */
-.close {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-    color: #f44336;
-    cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
 }

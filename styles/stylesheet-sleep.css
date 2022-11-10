@@ -128,3 +128,30 @@ i.fa-play-circle,
 i.fa-pause-circle {
   cursor: pointer;
 }
+
+.menu-bottom {
+  width: 960px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 100px;
+  justify-content: space-around;
+  }
+  
+  .bloc-icon {
+  /* margin:10px auto 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
+  }
+  
+  .menu-icon {
+  margin-right: 150px;
+  margin-left: 150px;
+  
+  }
+  
+  .nav-bottom {
+    width: 960px;
+    margin: auto;
+  }
