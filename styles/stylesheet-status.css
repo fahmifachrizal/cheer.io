@@ -235,3 +235,11 @@ section {
     display: none;
     }
 } */
+
+.container {
+    margin:auto;
+}
+
+.sticky {
+    position: sticky;
+}

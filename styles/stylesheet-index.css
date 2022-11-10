@@ -6,13 +6,11 @@
     
 body {   
     background-image: url("../assets/landing-page1.jpg");
-
     margin: 0;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
 }
