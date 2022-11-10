@@ -95,7 +95,6 @@ const users = [
 
 // TODO Event listerner
 document.addEventListener("DOMContentLoaded", function (event) {populateStorage()})
-console.log(localStorage)
 
 // TODO List of function
 function populateStorage() {
