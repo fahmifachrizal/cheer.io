@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
-    <!--  All snippets are MIT license http://bootdey.com/license -->
-    <title>Your day so far</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="./scripts/script-status.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./styles/stylesheet-status.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
-</head>
+	<head>
+		<meta charset="utf-8">
+		<!--  This file has been downloaded from bootdey.com @bootdey on twitter -->
+		<!--  All snippets are MIT license http://bootdey.com/license -->
+		<title>Your day so far</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="./scripts/script-status.js"></script>
+		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="./styles/stylesheet-status.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+		<style>
+			.wraper {
+            position: absolute;
+            left: 50%;
+            transform: translate( -50%);
+            width: 90%;
+            }
+		</style>
+	</head>
+	
+	<body >
+		<nav class="navbar fixed-top navbar-light bg-light">
+			<div class="profile">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="./profile.html"><h2>Hi <span id="profile-name" style="color:#1552c2 ;"></span></h2></a>
+					<div><a id="log-out" class="navbar-brand" href="./login.html"><i class="bi bi-box-arrow-right"></i> Log out</a></div>
+				</div>
+			</div>
+		</nav>
+		<div class="timeline_area section_padding_130" >
+			<section class="wraper" >
+				<div class='sticky'><h1 style="color: white; margin-bottom: 25px;">Your day so far...</h1></div>
+				<div class="container-timeline">
 
-<body>
-    <nav class="navbar fixed-top navbar-light bg-light">
-        <div class="profile">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="./profile.html">
-                    <h2 id="profile-name">Hi </h2>
-                </a>
-                <div><a id="log-out" class="navbar-brand" href="./login.html">Log out</a></div>
-            </div>
-        </div>
-    </nav>
-    <section class="timeline_area section_padding_130">
-        <div class="container">
-            <div class='sticky'>
-                <h1 style="color: white; margin-top: 100px; margin-bottom: 25px;">Your day so far...</h1>
-            </div>
-            <div class="container-timeline">
                 <div class="row">
                     <div class="col-12">
                         <div class="time-segment">
                             <h3 style="color: white;"><i class="fa fa-sun-o"></i>Morning</h3>
-                            <!-- Timeline Area-->
+							
                             <div class="apland-timeline-area" id="morning"></div>
-                            <!-- End of Timeline Area-->
-                        </div>
+                            
+						</div>
                         <div class="time-segment">
                             <h3 style="color: white;"><i class="fa fa-sun-o"></i>Afternoon</h3>
-                            <!-- Timeline Area-->
+                            
                             <div class="apland-timeline-area" id="afternoon"></div>
-                            <!-- End of Timeline Area-->
-                        </div>
+                            
+						</div>
                         <div class="time-segment">
                             <h3 style="color: white;"><i class="fa fa-moon-o"></i>Evening</h3>
-                            <!-- Timeline Area-->
+                            
                             <div class="apland-timeline-area" id="evening"></div>
+
                             <!-- End of Timeline Area-->
                         </div>
                     </div>
@@ -57,65 +64,32 @@
             </div>
         </div>
     </section>
-    <nav class="navbar fixed-bottom navbar-light bg-light mobile-nav">
-        <div class="container-fluid justify-content-center">
-            <ul class="navbar-nav flex-row d-none d-md-flex">
-
-                <li class="nav-item me-3 me-lg-1 active">
-                    <a class="nav-link">
-                        <div style="text-align: center;">
-                            <i class="fa fa-clock-o fa-2x menu-icon"></i>
-                            <p style="font-size: 10px;">Status</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="nav-item me-3 me-lg-1">
-                    <a class="nav-link" href="./watsup.html">
-                        <div style="text-align: center;">
-                            <i class="fa fa-clock-o fa-2x menu-icon"></i>
-                            <p style="font-size: 10px;">What's Up</p>
-                        </div>
-                    </a>
-                </li>
-
-                <li class="nav-item me-3 me-lg-1">
-                    <a class="nav-link" href="./sleep.html">
-                        <div style="text-align: center;">
-                            <i class="fa fa-clock-o fa-2x menu-icon"></i>
-                            <p style="font-size: 10px;">Sleep</p>
-                        </div>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-    </nav>
-    <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <form class="modal-content" action="/action_page.php">
-            <div class="container-delete">
-                <h1>Delete history</h1>
-                <p>Are you sure you want to delete your previous emotion?</p>
-
-                <div class="clearfix">
-                    <button type="button" id="cancelbtn">Cancel</button>
-                    <button type="button" id="deletebtn">Delete</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-</body>
-
+		</div>
+		
+		
+		
+		<div>
+			<nav style="background-color: #2a2661 ;" class="navbar navbar-dark fixed-bottom  navbar-expand">
+				<ul class="navbar-nav nav-justified w-100">
+					<li class="nav-item">
+						<a href="./status.html" class="nav-link"><i class="bi bi-activity"></i><br>
+							Status
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="./sleep.html" class="nav-link"><i class="bi bi-clock"></i><br>
+							Sleep
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="./watsup.html" class="nav-link"><i class="bi bi-chat-square-heart"></i><br>
+							What's Up
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+		
+	</body>
 </html>
