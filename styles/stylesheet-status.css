@@ -1,237 +1,102 @@
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+
 body {
-    margin-top: 20px;
-    background-image: url("../assets/landing-page1.jpg");
-    background-size:cover;
-}
-
-section {
-    margin: 70px auto 70px auto;
-    padding-left: 20px;
-    width: 960px;
-    /* background-color: violet; */
-}
-
-.timeline_area {
-    position: relative;
-    z-index: 1;
-}
-
-.single-timeline-area {
-    position: relative;
-    z-index: 1;
-    padding-left: 50px;
-}
-
-@media (pointer:coarse){
-    .single-timeline-area {
-        padding-left: 100px;
-    }
+  min-height: 100vh;
+  background: #212534;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
 }
 
 
+.card {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+  font-family: cursive;
+}
 
-.single-timeline-area .timeline-date {
+.card:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.card::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
     position: absolute;
-    width: 50px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    padding-right: 60px;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
 }
 
-@media (pointer:coarse) {
-    .single-timeline-area .timeline-date {
-        width: 100px;
-    }
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
 }
 
-.single-timeline-area .timeline-date::after {
-    position: absolute;
-    width: 3px;
-    height: 100%;
-    content: "";
-    background-color: #ebebeb;
-    top: 0;
-    right: 30px;
-    z-index: 1;
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
 }
 
-.single-timeline-area .timeline-date::before {
-    position: absolute;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background-color: #f1c40f;
-    content: "";
-    top: 50%;
-    right: 26px;
-    z-index: 5;
-    margin-top: -5.5px;
+a {
+  color: #212534;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
 }
-
-.single-timeline-area .timeline-date p {
-    margin-bottom: 0;
-    color: #020710;
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight: 500;
-}
-
-.single-timeline-area .single-timeline-content {
-    background-color: white;
-    position: relative;
-    z-index: 1;
-    padding: 30px 30px 25px;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
-    box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
-    border: 1px solid #ebebeb;
-}
-
-@media (pointer:coarse) {
-    .single-timeline-area .single-timeline-content {
-        padding: 20px;
-    }
-}
-
-.single-timeline-area .single-timeline-content .timeline-icon {
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    width: 30px;
-    height: 30px;
-    background-color: #f1c40f;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 30px;
-    flex: 0 0 30px;
-    text-align: center;
-    max-width: 30px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.single-timeline-area .single-timeline-content .timeline-icon i {
-    color: #ffffff;
-    line-height: 30px;
-}
-
-.single-timeline-area .single-timeline-content .timeline-text h6 {
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-}
-
-.single-timeline-area .single-timeline-content .timeline-text p {
-    font-size: 13px;
-    margin-bottom: 0;
-}
-
-.single-timeline-area .single-timeline-content:hover .timeline-icon,
-.single-timeline-area .single-timeline-content:focus .timeline-icon {
-    background-color: #020710;
-}
-
-.emotion {
-    background-size: 30%;
-    background-repeat: no-repeat;
-    background-position: 100% 30%;
-    /* background-position: right center; */
-}
-
-.angry {
-    background-image: url("../assets/emotions/angry.svg");
-}
-
-.anxiety {
-    background-image: url("../assets/emotions/anxiety.svg");
-}
-
-.envy {
-    background-image: url("../assets/emotions/envy.svg");
-}
-
-.fear {
-    background-image: url("../assets/emotions/fear.svg");
-}
-
-.happy {
-    background-image: url("../assets/emotions/happy.svg");
-}
-
-.irritation {
-    background-image: url("../assets/emotions/irritation.svg");
-}
-
-.sad {
-    background-image: url("../assets/emotions/sad.svg");
-}
-
-.worry {
-    background-image: url("../assets/emotions/worry.svg");
-}
-
-
-.time-segment h3 {
-    margin-left: 50px;
-}
-
-.time-segment h3 i {
-    text-indent: -40px;
-    text-align: center;
-}
-
-.menu-icon {
-    margin-right: 150px;
-    margin-left: 150px;
-
-}
-
-.profile {
-    margin: auto;
-    padding-left: 20px;
-    height: max-content;
-    width: 960px;
-}
-
-.mobile-nav {
-    background: #F1F1F1;
-    bottom: 0;
-    height: 65px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto
-}
-
-.menu-bottom {
-    width: 960px;
-    display: flex;
-    margin: auto;
-    justify-content: space-around;
-}
-
-.bloc-icon {
-    margin:10px auto 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 5%;
-}
-
-
-/* @media screen and (min-width: 600px) {
-    .mobile-nav {
-    display: none;
-    }
-} */
