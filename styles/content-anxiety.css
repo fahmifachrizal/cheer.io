@@ -11,24 +11,31 @@
   
   
   body {
-    min-height: 100vh;
-    background: #212534;
+    min-height: 90vh;
+    /* background: #212534; */
+    background:url(../assets/watsup/background.jpg);
+    background-size: cover;
+    justify-content: center;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    /* padding-top: 100px; */
+    /* padding-bottom: 100px; */
     box-sizing: border-box;
   }
   
   
   .card {
-    background: #191c29;
+    background-image: url(../assets/watsup/anxiety.jpg);
+    background-size: 230%;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    /* background: #191c29; */
     width: var(--card-width);
     height: var(--card-height);
     padding: 3px;
     position: relative;
-    border-radius: 6px;
+    border-radius: 30px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -53,7 +60,7 @@
     content: "";
     width: 104%;
     height: 102%;
-    border-radius: 8px;
+    border-radius: 30px;
     background-image: linear-gradient(
       var(--rotate)
       , #5ddcff, #3c67e3 43%, #4e00c2);
@@ -103,9 +110,21 @@
 
   .isi {
     font-size: 1rem;
+    color: white;
+    text-shadow: 2px 2px 8px black;
   }
 
+
   .save {
-    font-size: 1rem;
-    color: gray;
+    font-size: 25px;
+    color: rgb(34, 34, 34);
+  }
+
+  .box-save{
+    margin: 20px;
+    text-align:center;
+    background-color: white;
+    width: var(--card-width);
+    height: 50px;
+    border-radius: 15px;
   }
