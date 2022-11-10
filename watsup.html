@@ -10,25 +10,30 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
   <script src="./scripts/script-watsup.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+ 
   <title>Watsup</title>
 </head>
 
 <body>
-  <!-- Nav top -->
+
   <nav class="navbar fixed-top navbar-light bg-light">
     <div class="profile">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./profile.html">
-          <h2 id="profile-name">Hi </h2>
-        </a>
-        <div><a id="log-out" class="navbar-brand" href="./login.html">Log out</a></div>
-      </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./profile.html"><h2>Hi <span id="profile-name" style="color:#1552c2 ;"></span></h2></a>
+            <div><a id="log-out" class="navbar-brand" href="./login.html"><i class="bi bi-box-arrow-right"></i> Log out</a></div>
+        </div>
     </div>
-  </nav>
+</nav>
 
-  <!-- content -->
   <section class="hero-section section_padding_130">
     <div class="card-grid">
+      <a class="cards" href="./cards/content-happy.html">
+        <div class="card__background" style="background-image: url(./assets/watsup/happy.jpg)"></div>
+        <div class="card__content">
+          <h3 class="card__heading">Happy</h3>
+        </div>
+      </a>
       <a class="cards" href="./cards/content-anxiety.html">
         <div class="card__background" style="background-image: url(./assets/watsup/anxiety.jpg)"></div>
         <div class="card__content">
@@ -56,41 +61,27 @@
         <div>
   </section>
 
-  <!-- Nav bottom -->
-  <nav class="navbar fixed-bottom navbar-light bg-light mobile-nav">
-    <div class="container-fluid justify-content-center">
-      <ul class="navbar-nav flex-row d-none d-md-flex">
-
-        <li class="nav-item me-3 me-lg-1 ">
-          <a class="nav-link" href="./status.html">
-            <div style="text-align: center;">
-              <i class="fa fa-clock-o fa-2x menu-icon"></i>
-              <p style="font-size: 10px;">Status</p>
-            </div>
-          </a>
-        </li>
-
-        <li class="nav-item me-3 me-lg-1 active">
-          <a class="nav-link" href="#">
-            <div style="text-align: center;">
-              <i class="fa fa-clock-o fa-2x menu-icon"></i>
-              <p style="font-size: 10px;">What's Up</p>
-            </div>
-          </a>
-        </li>
-
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link" href="./sleep.html">
-            <div style="text-align: center;">
-              <i class="fa fa-clock-o fa-2x menu-icon"></i>
-              <p style="font-size: 10px;">Sleep</p>
-            </div>
-          </a>
-        </li>
-
-      </ul>
-    </div>
-  </nav>
+    <div>
+      <nav style="background-color: #2a2661 ;" class="navbar navbar-dark fixed-bottom  navbar-expand">
+          <ul class="navbar-nav nav-justified w-100">
+              <li class="nav-item">
+                  <a href="./status.html" class="nav-link"><i class="bi bi-activity"></i><br>
+                      Status
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a href="./sleep.html" class="nav-link"><i class="bi bi-clock"></i><br>
+                      Sleep
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a href="./watsup.html" class="nav-link"><i class="bi bi-chat-square-heart"></i><br>
+                      What's Up
+                  </a>
+              </li>
+          </ul>
+      </nav>
+  </div>
 
 </body>
 

@@ -17,6 +17,15 @@ loginButton.addEventListener("click", (e) => {
         if (username === user.username && password === user.password) {
             isUser = true
             break
+        } else {
+
+            swal({
+                title: "TETOT!",
+                text: "Username & Password Gak Cocok Nih, Coba lagi Yuk!",
+                icon: "error",
+              });
+            
+            break
         }
     }
 
