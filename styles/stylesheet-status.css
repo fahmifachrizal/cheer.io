@@ -4,7 +4,6 @@ body {
     max-width: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
 }
 
 section {
@@ -25,7 +24,7 @@ section {
     padding-left: 50px;
 }
 
-@media (pointer:coarse){
+@media (pointer:coarse) {
     .single-timeline-area {
         padding-left: 100px;
     }
@@ -90,6 +89,7 @@ section {
 }
 
 .single-timeline-area .single-timeline-content {
+    /* cursor: pointer; */
     background-color: white;
     position: relative;
     z-index: 1;
@@ -100,12 +100,6 @@ section {
     -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
     box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
     border: 1px solid #ebebeb;
-}
-
-@media (pointer:coarse) {
-    .single-timeline-area .single-timeline-content {
-        padding: 20px;
-    }
 }
 
 .single-timeline-area .single-timeline-content .timeline-icon {
@@ -162,7 +156,7 @@ section {
     background-image: url("../assets/emotions/envy.svg");
 }
 
-.sadness {
+.sad {
     background-image: url("../assets/emotions/sad.svg");
 }
 
@@ -188,16 +182,6 @@ section {
     width: 960px;
 }
 
-.mobile-nav {
-    background: #F1F1F1;
-    bottom: 0;
-    height: 65px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto
-}
-
 .menu-bottom {
     width: 960px;
     /* display: flex; */
@@ -206,7 +190,7 @@ section {
 }
 
 .bloc-icon {
-    margin:10px auto 10px;
+    margin: 10px auto 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,9 +205,100 @@ section {
 } */
 
 .container {
-    margin:auto;
+    margin: auto;
+    padding-bottom: 100px;
 }
 
 .sticky {
     position: sticky;
+}
+
+.delete-x {
+    color: white;
+    padding-top: 54px;
+    text-indent: -170px;
+}
+
+.delete-x:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.delete-x:not(:hover) {
+    opacity: 0.4;
+}
+
+/* delete comfirmation */
+#cancelbtn,
+#deletebtn {
+    float: center;
+    width: 25%;
+    margin: 20px;
+    padding-left: 20px;
+    align-items: center;
+}
+
+/* Add a color to the cancel button */
+#cancelbtn {
+    background-color: #ccc;
+    color: black;
+}
+
+/* Add a color to the delete button */
+#deletebtn {
+    background-color: #f44336;
+}
+
+.container-delete {
+    width: 960px;
+    padding: 16px;
+    margin: auto;
+    text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+    left: 0;
+    top: 0;
+    width: 960px;
+    height: 50%;
+    background-color: #474e5d;
+    padding-top: 15%;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 960px;
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* The Modal Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

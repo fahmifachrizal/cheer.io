@@ -10,10 +10,12 @@ for (let key in users) {
 }
 profilename = user.bio.fullname
 
-
-
 // List of event listener
 document.addEventListener("DOMContentLoaded", function (event) {
     document.getElementById('profile-name').innerText += ` ${profilename}`
 }
 )
+
+// document.getElementById("log-out").addEventListener("click", function (event) {
+//     sessionStorage.clear();
+// })

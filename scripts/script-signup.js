@@ -1,8 +1,11 @@
-const aaaa = JSON.parse(localStorage.list_users)
+const users = JSON.parse(localStorage.list_users)
 const loginForm = document.getElementById("login-form");
-console.log(users)
+const loginButton = document.getElementById("login-form-submit");
 
 // TODO Event listerner
+document.addEventListener("DOMContentLoaded", function (event) {
+})
+
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
     const fullname = loginForm.fullname.value;
@@ -11,15 +14,18 @@ loginButton.addEventListener("click", (e) => {
     const password = loginForm.password.value;
     
     let obj = {
-        id: 11,
+        id: 9999,
         username: username,
         email: email,
         password: password,
         bio: { fullname: fullname, age: ``, sex: ``, goal: `` },
         history: []
     }
+
+    
+
     users.push(obj)
-    populateStorage()
+    addNewUser()
     location.assign('./login.html');
 })
 

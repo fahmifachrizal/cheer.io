@@ -1,4 +1,5 @@
-let this_day = new Date().toISOString().slice(0, 10)
+let this_day = addHours(new Date(),7).toISOString().slice(0, 10)
+
 const users = [
     {
         id: 9,
@@ -7,8 +8,8 @@ const users = [
         password: `admin123`,
         bio: { fullname: `Admin`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
-            { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` }
+            { emotion_id: `idx1`, time: `${this_day}T08:01`, emotion: `angry` },
+            { emotion_id: `idx2`, time: `${this_day}T13:01`, emotion: `sad` }
         ]
     },
     {
@@ -17,10 +18,7 @@ const users = [
         email: `fahmifachrizal@cheer.io`,
         password: `password`,
         bio: { fullname: `Fahmi Fachrizal`, age: `20`, sex: `Male`, goal: `Happy` },
-        history: [
-            { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
-            { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
-        ]
+        history: []
     },
     {
         id: 11,
@@ -29,8 +27,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Moch Jordan`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
-            { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
+            { emotion_id: `idx1`, time: `${this_day}T08:01`, emotion: `angry` },
+            { emotion_id: `idx2`, time: `${this_day}T13:01`, emotion: `sad` }
         ]
     },
     {
@@ -40,8 +38,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Syamsul Bahri`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
-            { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
+            { emotion_id: `idx1`, time: `${this_day}T08:01`, emotion: `angry` },
+            { emotion_id: `idx2`, time: `${this_day}T13:01`, emotion: `sad` }
         ]
     },
     {
@@ -51,8 +49,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Rayhan Fatwa Madjid`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
-            { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
+            { emotion_id: `idx1`, time: `${this_day}T08:01`, emotion: `angry` },
+            { emotion_id: `idx2`, time: `${this_day}T13:01`, emotion: `sad` }
         ]
     },
     {
@@ -62,8 +60,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Argi Bramantya`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
-            { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
+            { emotion_id: `idx1`, time: `${this_day}T08:01`, emotion: `angry` },
+            { emotion_id: `idx2`, time: `${this_day}T13:01`, emotion: `sad` }
         ]
     },
     {
@@ -73,8 +71,8 @@ const users = [
         password: `password`,
         bio: { fullname: `Attar Baqo`, age: `20`, sex: `Male`, goal: `Happy` },
         history: [
-            { emotion_id: `902`, time: `${this_day}T08:01`, emotion: `angry` },
-            { emotion_id: `903`, time: `${this_day}T13:01`, emotion: `sad` },
+            { emotion_id: `idx1`, time: `${this_day}T08:01`, emotion: `angry` },
+            { emotion_id: `idx2`, time: `${this_day}T13:01`, emotion: `sad` }
         ]
     },
 ]
@@ -85,4 +83,9 @@ document.addEventListener("DOMContentLoaded", function (event) {populateStorage(
 // TODO List of function
 function populateStorage() {
     localStorage.setItem(`list_users`, JSON.stringify(users));
+}
+
+function addHours(date, hours) {
+    date.setHours(date.getHours() + hours);
+    return date;
 }

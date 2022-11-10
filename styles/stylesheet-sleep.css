@@ -1,86 +1,130 @@
-* {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-family: "Montserrat";
-    box-sizing: border-box;
+.profile {
+  margin: auto;
+  padding-left: 20px;
+  height: max-content;
+  width: 960px;
 }
-.container{
-    
-    width: 1140px;
-    margin: 0 auto;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    height: 70px;
-    align-items: center;
-}
-.nav-items {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    color: #e3eef3;
-}
-.nav-links {
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    list-style: none;
-}
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-.player {
-    position: absolute;
-    width: 350px;
-    background: #e3eef3;
-    border-radius: 20px; 
-    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.5);
 
+.menu-bottom {
+  width: 960px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 100px;
+  justify-content: space-around;
 }
-.player .imgbox {
-    position: relative;
-    width: 100%;
-    height: 300px;
+
+.bloc-icon {
+  /* margin:10px auto 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5%;
 }
-.player .imgbox img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-top-left-radius: 20px ;
-    border-top-right-radius: 20px;
+
+.menu-icon {
+  margin-right: 150px;
+  margin-left: 150px;
 }
-.player audio{
-    width: 100%;
-    outline: none;
-    background-position: blue;
+
+section {
+  padding-top: 200px;
+  margin: auto;
+  width: 960px;
 }
-.main {
-    width: 100%;
-    height: 100vh;
-    background-image: url("/landing-page1.jpg");
-    background-size: cover;
-    background-position: center;
-} 
-.navbar {
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.player {
+  height: 0%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-.logo {
-    font-size: 36px;
-    color: white;
-    font-weight: bold;
-    width: 120px;
-    cursor: pointer;
+
+/* Changing the font sizes to suitable ones */
+.track-artist {
+  font-size: 1.5rem;
+  margin: 10%;
+}
+
+/* Using flex with the row direction to
+   align items in a horizontal direction */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5%;
+}
+
+.playpause-track {
+  padding: 25px;
+  opacity: 0.7;
+
+  /* Smoothly transition the opacity */
+  transition: opacity .2s;
+}
+
+/* Change the opacity when mouse is hovered */
+.playpause-track:hover{
+  opacity: 1.0;
+}
+
+/* Define the slider width so that it scales properly */
+.slider_container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:1%
+}
+
+/* Modify the appearance of the slider */
+.seek_slider,
+.volume_slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 10px;
+  background: black;
+  opacity: 0.6;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/* Modify the appearance of the slider thumb */
+.seek_slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: rgb(255, 81, 0);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Change the opacity when mouse is hovered */
+.seek_slider:hover,
+.volume_slider:hover {
+  opacity: 1.0;
+}
+
+.seek_slider {
+  width: 60%;
+}
+
+i.fa-volume-down,
+i.fa-volume-up {
+  padding: 10px;
+}
+
+/* Change the mouse cursor to a pointer
+   when hovered over */
+i.fa-play-circle,
+i.fa-pause-circle {
+  cursor: pointer;
 }

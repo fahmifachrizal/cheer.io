@@ -6,61 +6,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles/stylesheet-sleep.css">
+    <link rel="stylesheet" href="./styles/stylesheet-watsup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <title>How's your mood today ?</title>
 </head>
 
 <body>
-    <div class="music-player">
-        <!--<div style="background-image: url(https://i.imgur.com/yqB0erk.jpg);" class="album"></div>-->
-        
-        <div class="info">
-          
-          <div class="left">
-            <a href="javascript:;" class="icon-shuffle"></a>
-            <a href="javascript:;" class="icon-heart"></a>
-          </div>
-          
-          <div class="center">
-            <div class="jp-playlist">
-              <ul>
-                <li></li>
-              </ul>
-            </div> 
-          </div>
-          
-          <div class="right">
-            <a href="javascript:;" class="icon-repeat"></a>
-            <a href="javascript:;" class="icon-share"></a>
-          </div>
-          
-          <div class="progress"></div>
-          
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <div class="profile">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./profile.html">
+                    <h2 id="profile-name">Hi </h2>
+                </a>
+                <div><a id="log-out" class="navbar-brand" href="./login.html">Log out</a></div>
+            </div>
         </div>
-            
-        <div class="controls">
-          <div class="current jp-current-time">00:00</div>
-          <div class="play-controls">
-            <a href="javascript:;" class="icon-previous jp-previous" title="previous"></a>
-            <a href="javascript:;" class="icon-play jp-play" title="play"></a>
-            <a href="javascript:;" class="icon-pause jp-pause" title="pause"></a>
-            <a href="javascript:;" class="icon-next jp-next" title="next"></a>
-          </div>
-          <div class="volume-level">
-            <a href="javascript:;" class="icon-volume-up" title="max volume"></a>
-            <a href="javascript:;" class="icon-volume-down" title="mute"></a>
-          </div>
+    </nav>
+
+    <section>
+        <div class="player">
+
+            <!-- Define the section for displaying details -->
+            <div class="details">
+                <div class="track-artist">Beach</div>
+            </div>
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i><input type="range" min="0" max="99" value="50" class="seek_slider" id="slider1"
+                    onchange="setVolume()"><i class="fa fa-volume-up"></i>
+            </div>
+
+            <!-- Define the section for displaying details -->
+            <div class="details">
+                <div class="track-artist">Rain</div>
+            </div>
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i><input type="range" min="0" max="99" value="50" class="seek_slider" id="slider2"
+                    onchange="setVolume()"><i class="fa fa-volume-up"></i>
+            </div>
+
+            <!-- Define the section for displaying details -->
+            <div class="details">
+                <div class="track-artist">Birds</div>
+            </div>
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i><input type="range" min="0" max="99" value="50" class="seek_slider" id="slider3"
+                    onchange="setVolume()"><i class="fa fa-volume-up"></i>
+            </div>
+
+            <!-- Define the section for displaying details -->
+            <div class="details">
+                <div class="track-artist">Animals</div>
+            </div>
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i><input type="range" min="0" max="99" value="50" class="seek_slider" id="slider4"
+                    onchange="setVolume()"><i class="fa fa-volume-up"></i>
+            </div>
+
+            <!-- Define the section for displaying track buttons -->
+            <div class="buttons">
+                <div id="playpause-track" onclick="playpauseTrack()">
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+            </div>
+
         </div>
-        
-        <div id="jquery_jplayer" class="jp-jplayer"></div>
-        
-      </div>
-      
-      <p class="copyrights">
-        Designed by <a href='https://dribbble.com/shots/1680792-Music-Player-Widget-Free-PSD'>Vladimyr Kondriianenko</a> and coded by <a href='https://codepen.io/mustafaismail22/'>Mustafa ismail</a>
-      </p>
-      
-    <script src="./scripts/script-index.js"></script>
+
+
+
+        <div id="audioplay">
+            <audio class="audios" id='audio1' src="./assets/musics/audio-loops/beach.wav" type="audio/wav" preload="auto" loop></audio>
+            <audio class="audios" id='audio2' src="./assets/musics/audio-loops/rain.wav" type="audio/wav" preload="auto" loop></audio>
+            <audio class="audios" id='audio3' src="./assets/musics/audio-loops/birds.wav" type="audio/wav" preload="auto" loop></audio>
+            <audio class="audios" id='audio4' src="./assets/musics/audio-loops/animal.wav" type="audio/wav" preload="auto" loop></audio>
+        </div>
+    </section>
+
+    <nav class="navbar fixed-bottom navbar-light bg-light mobile-nav">
+        <div class="container-fluid justify-content-center">
+            <ul class="navbar-nav flex-row d-none d-md-flex">
+
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="./status.html">
+                        <div style="text-align: center;">
+                            <i class="fa fa-clock-o fa-2x menu-icon"></i>
+                            <p style="font-size: 10px;">Status</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="./watsup.html">
+                        <div style="text-align: center;">
+                            <i class="fa fa-clock-o fa-2x menu-icon"></i>
+                            <p style="font-size: 10px;">What's Up</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="nav-item me-3 me-lg-1 active">
+                    <a class="nav-link">
+                        <div style="text-align: center;">
+                            <i class="fa fa-clock-o fa-2x menu-icon"></i>
+                            <p style="font-size: 10px;">Sleep</p>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
 </body>
+<script src="./scripts/script-sleep.js"></script>
 
 </html>
