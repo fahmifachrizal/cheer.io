@@ -16,6 +16,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 }
 )
 
-document.getElementById("log-out").addEventListener("click", function (event) {
-    sessionStorage.clear();
-})
+// document.getElementById("log-out").addEventListener("click", function (event) {
+//     sessionStorage.clear();
+// })

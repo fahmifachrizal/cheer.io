@@ -98,6 +98,8 @@
   .card-grid:hover > .cards:not(:hover) .card__background{
     filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
   }
+
+
   
   .card__content{
     left: 0;
@@ -105,6 +107,15 @@
     position: absolute;
     top: 0;
   }
+
+  .cards:hover .card__content{
+    transform: scale(1.05) translateZ(0);
+  }
+
+  .card-grid:hover > .cards:not(:hover) .card__content{
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+  }
+  
   
   .card__category{
     color: var(--text-light);

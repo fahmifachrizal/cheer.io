@@ -9,17 +9,20 @@ for (let key in users) {
     }
 }
 profilename = user.bio.fullname
-const save_button = document.getElementsByClassName('save')
+const save_button = document.getElementById('save')
 const emotion = document.getElementById('emotion').innerHTML
-const time_day = addHours(new Date(),7)
+const time_day = addHours(new Date(),7).toISOString()
 
-document.addEventListener("click", function (event) {
-    let time = new Date().toISOString()
-    let obj = {emotion_id:`666`, time:time_day, emotion:String(emotion).toLowerCase()} 
+document.addEventListener('click',console.log('clicked'))
+
+save_button.addEventListener("click", function (event) {
     for (let key in users) {
         let val = users[key]
+        let obj = {emotion_id:`idx${Number(val.history.length)+1}`, time:time_day, emotion:String(emotion).toLowerCase()} 
         if (val.username === username) {
             val.history.push(obj)
+            val.history = val.history.sort(function(a,b){return new Date(a.time) - new Date(b.time);});
+
         }
     }
     populateStorage()
@@ -31,6 +34,7 @@ document.addEventListener("click", function (event) {
 function populateStorage() {
     localStorage.setItem(`list_users`, JSON.stringify(users));
 }
+
 
 function addHours(date, hours) {
     date.setHours(date.getHours() + hours);
