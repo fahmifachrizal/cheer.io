@@ -19,8 +19,8 @@ loginButton.addEventListener("click", (e) => {
         } else {
 
             swal({
-                title: "TETOT!",
-                text: "Username & Password Gak Cocok Nih, Coba lagi Yuk!",
+                title: "Warning",
+                text: "Username or Password doesn't match, Please try again",
                 icon: "error",
             });
         }
