@@ -26,7 +26,6 @@ save_button.addEventListener("click", function (event) {
         }
     }
     populateStorage()
-
 }
 )
 

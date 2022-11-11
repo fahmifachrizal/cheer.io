@@ -134,6 +134,11 @@ section {
     background-image: url("../assets/emotions/angry.svg");
 }
 
+.happy {
+    background-image: url("../assets/emotions/happy.svg");
+}
+
+
 .anxiety {
     background-image: url("../assets/emotions/anxiety.svg");
 }

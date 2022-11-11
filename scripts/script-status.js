@@ -14,7 +14,7 @@ for (let key in users) {
     }
 }
 
-let lookup = { anger: 'angry', anxiety: 'anxiety', fear: 'fear', sadness: 'sad', angry: 'angry', anxiety: 'anxiety', fear: 'fear', sad: 'sad' }
+let lookup = { anger: 'angry', anxiety: 'anxiety', fear: 'fear', sadness: 'sad', angry: 'angry', anxiety: 'anxiety', fear: 'fear', sad: 'sad', happy:'happy'}
 
 profilename = user.bio.fullname
 for (let key in user.history) {

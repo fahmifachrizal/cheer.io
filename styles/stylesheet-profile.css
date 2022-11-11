@@ -67,9 +67,10 @@ ul {
  }
 
 #email {
+  padding-top: 10px;
 	margin-left: 195px;
 	margin-top: -25px;
-	font-size: 24px;
+	font-size: 16px;
 	color: #000000;
  }
 
