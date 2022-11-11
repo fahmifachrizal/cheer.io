@@ -13,31 +13,14 @@ for (let key in users) {
 }
 
 profilename = user.bio.fullname
-
-
-const name = profilename
-document.getElementById("name").innerHTML = name;
-
-const email = "Email"
-document.getElementById("email").innerHTML = email;
-
-const status = "Status"
-document.getElementById("status").innerHTML = status;
-
-const weight = "BB"
+document.getElementById("name").innerHTML = profilename;
+document.getElementById("email").innerHTML = user.email;
+document.getElementById("status").innerHTML = user.history[user.history.length].emotion;
 document.getElementById("weight").innerHTML = weight;
-
-const height = "TB"
-document.getElementById("height").innerHTML = height;
-
+document.getElementById("height").innerHTML = 178;
 const goal = ["Boxing", "Running", "Dring More Water", "Stop Smoking"] //List dari DB
-
-
-
 const container = document.getElementById("goals")
-
 for (let i = 0; i < goal.length; i++) {
- 
     container.innerHTML += `
     <li>${goal[i]}</li>
     `
